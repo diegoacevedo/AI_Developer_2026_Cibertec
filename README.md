@@ -1,5 +1,5 @@
 # Python AI Developer 2026
-### by Diego Acevedo Yamashiro
+### por Diego Acevedo Yamashiro
 
 ---
 
