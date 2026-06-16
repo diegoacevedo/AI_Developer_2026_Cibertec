@@ -1,0 +1,18 @@
+MANUAL DE INFRAESTRUCTURA — TechCorp Perú S.A.C.
+
+SERVIDORES DE PRODUCCIÓN
+TechCorp opera 3 servidores de producción en el datacenter de Lima:
+- Server-PROD-01: aplicación principal, 32 cores, 128 GB RAM
+- Server-PROD-02: base de datos PostgreSQL 15, 64 cores, 256 GB RAM
+- Server-PROD-03: servicios de cache Redis y cola de mensajes RabbitMQ
+El uptime mínimo garantizado es 99.9% mensual. Cualquier caída debe reportarse al equipo de DevOps en un máximo de 5 minutos mediante el canal #incidentes en Slack.
+
+PROCEDIMIENTO DE BACKUP
+Los backups se ejecutan diariamente a las 2:00 AM hora de Lima:
+- Backup completo: todos los domingos
+- Backup incremental: lunes a sábado
+- Retención: 30 días para backups diarios, 12 meses para backups semanales
+- Almacenamiento: bucket S3 en región us-east-1 con cifrado AES-256
+
+CAPACIDAD
+El umbral de alerta de CPU es 80%. El sistema escala automáticamente agregando instancias EC2 t3.large. El máximo de instancias de escalado automático es 5.

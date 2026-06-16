@@ -1,0 +1,18 @@
+# dependencias y caché de Python — se instalan dentro del contenedor
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# variables de entorno — NUNCA incluir en la imagen
+# se pasan al contenedor con -e o --env-file en docker run
+.env
+
+# base vectorial local — se genera dentro del contenedor al arrancar
+chroma/
+
+# archivos de desarrollo que no van a producción
+*.ipynb
+.git/
+.gitignore
+README.md

@@ -1,0 +1,23 @@
+PROCESO DE DEPLOY — TechCorp Perú S.A.C.
+
+AMBIENTES
+TechCorp mantiene 4 ambientes:
+- desarrollo (dev): rama feature/*, deploy automático por commit
+- integración (staging): rama develop, deploy automático por merge
+- pre-producción (pre-prod): rama release/*, deploy manual con aprobación
+- producción (prod): rama main, deploy manual con aprobación de 2 revisores
+
+VENTANAS DE DEPLOY A PRODUCCIÓN
+Los deploys a producción solo se permiten:
+- Martes y jueves entre 10:00 AM y 12:00 PM hora Lima
+- Nunca en viernes, fines de semana ni feriados
+- En caso de hotfix crítico: cualquier día con aprobación del CTO
+
+ROLLBACK
+Si un deploy causa incidentes:
+1. Detectar el problema (Grafana o reporte de usuario)
+2. Notificar al canal #incidentes en Slack
+3. Ejecutar: kubectl rollout undo deployment/app-prod
+4. Verificar que el servicio se restauró
+5. Crear un post-mortem dentro de las 24 horas siguientes
+La aprobación del rollback la da el Tech Lead de turno.

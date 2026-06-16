@@ -1,0 +1,16 @@
+MONITOREO Y ALERTAS — TechCorp Perú S.A.C.
+
+STACK DE MONITOREO
+- Métricas: Prometheus + Grafana (dashboard: grafana.techcorp.pe)
+- Logs: ELK Stack (Elasticsearch, Logstash, Kibana)
+- Trazabilidad: Jaeger para distributed tracing
+- Alertas: PagerDuty para incidentes P1 y P2
+
+NIVELES DE INCIDENTE
+- P1 (Crítico): sistema caído, pérdida de datos, brecha de seguridad. Tiempo de respuesta: 15 minutos. Responsable: DevOps on-call + CTO notificado automáticamente.
+- P2 (Alto): degradación significativa. Tiempo de respuesta: 1 hora.
+- P3 (Medio): funcionalidad no crítica afectada. Respuesta en 4 horas.
+- P4 (Bajo): mejoras y problemas menores. Respuesta en 1 semana.
+
+POST-MORTEM
+Todo incidente P1 o P2 requiere un post-mortem en Confluence dentro de las 48 horas siguientes al cierre.

@@ -1,0 +1,20 @@
+POLÍTICAS DE SEGURIDAD — TechCorp Perú S.A.C.
+
+GESTIÓN DE CONTRASEÑAS
+Todas las contraseñas de sistemas críticos deben cumplir:
+- Mínimo 16 caracteres
+- Al menos 1 mayúscula, 1 número y 1 carácter especial
+- Rotación obligatoria cada 90 días
+- No reutilizar las últimas 12 contraseñas
+El gestor de contraseñas corporativo es 1Password Business. Prohibido guardar contraseñas en texto plano.
+
+ACCESO A SISTEMAS
+El acceso a servidores de producción requiere:
+1. Aprobación del Tech Lead del área
+2. Autenticación de dos factores (2FA) obligatoria
+3. Acceso únicamente mediante VPN corporativa (WireGuard)
+4. Registro en el sistema de auditoría SIEM
+Los accesos no usados por más de 60 días se revocan automáticamente.
+
+POLÍTICA DE DATOS
+Los datos de clientes son confidenciales nivel 3. No pueden salir de los servidores corporativos sin cifrado. Violaciones se reportan al DPO en 24 horas.
