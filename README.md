@@ -1,5 +1,5 @@
 # Python AI Developer 2026
-### IES Cibertec S.A.C. — DEML-20261
+### by Diego Acevedo Yamashiro
 
 ---
 
